@@ -4,8 +4,9 @@ Console.WriteLine("Введите количество элементов в м�
 int n=Convert.ToInt32(Console.ReadLine());
 int[]array = new int[n];
 
-for (int i = 0; i < n; i++)
+for (int i = 0; i < array.Length; i++)
     {
-        
-        if (array[i].length<=3)
+        array[i] = new Random().Next(-10000, 10000);
+        if (i!=array.Length-1) Console.Write($"{array[i]}, ");
+        else Console.WriteLine($"{array[i]}");
     }
