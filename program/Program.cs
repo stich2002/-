@@ -1,8 +1,5 @@
 ﻿// Массив сортируется по количеству символов элемента (<=3)
 
-// Console.WriteLine("Введите количество элементов в массиве");
-// int n=Convert.ToInt32(Console.ReadLine());
-// string[] array = new string[n];
 
 string[] array; // ссылка на массив строк
 int n; // количество строк в массиве
@@ -27,10 +24,16 @@ array = new string[n];
         }
     } 
     while (s!= "");
+    Console.WriteLine("Исходный массив: ");
         for (int i = 0; i < array.Length; i++)
-        Console.WriteLine("array[{0}] = {1}", i, array[i]);
-        Console.ReadKey();
-
-
-       
+        {
+            if (i!=array.Length-1) Console.Write($"{array[i]}, ");
+            else Console.WriteLine($"{array[i]}");
+        }
+        
+       Console.WriteLine("Отсортированный массив:");
+        for (int i = 0; i < array.Length; i++)
+            {
+                if ((array[i].Length)<=3) Console.Write(array[i]+" ");
+            }
 
